@@ -22,24 +22,26 @@ Queue ADT是一种操作受限制的List ADT，这种List ADT的一端称为rear
 - `makeEmpty`：略。
 - `find`：略。
 - `findKth`：略。
-- `insert`：略。
-- `remove`：略。
+- `insert`：在指定的位置上增加一个元素。
+- `remove`：删除指定位置上的元素。
+- `遍历`：略。
+- `迭代`：略。
 
 ##### Stack ADT的操作
 
-- `push`：略。
-- `pop`：略。
+- `push`：在top增加一个元素。
+- `pop`：在top删除一个元素。
 
 ##### Queue ADT的操作
 
-- `enqueue`：略。
-- `dequeue`：略。
+- `enqueue`：在rear增加一个元素。
+- `dequeue`：在front删除一个元素。
 
 ### 应用
 
 ##### List ADT的应用
 
-- 略。
+- 略
 
 ##### Stack ADT的应用
 
@@ -50,4 +52,4 @@ Queue ADT是一种操作受限制的List ADT，这种List ADT的一端称为rear
 
 ##### Queue ADT的应用
 
-- 略
+- 排队
