@@ -16,4 +16,4 @@ Collection ADT是一种内含多个元素的ADT。
 
 ### Collection ADT的应用
 
-- 略。
+- 略
