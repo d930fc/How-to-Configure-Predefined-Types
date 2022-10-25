@@ -12,7 +12,7 @@ Stack ADT是一种操作受限制的List ADT，这种List ADT的一端称为bott
 
 ##### Queue ADT的结构
 
-Queue ADT是一种操作受限制的List ADT，这种List ADT的一端称为front，另一端称为rear，只在front进行删除，只在rear进行插入。
+Queue ADT是一种操作受限制的List ADT，这种List ADT的一端称为rear，另一端称为front，只在front进行删除，只在rear进行插入。
 
 ### 操作
 
