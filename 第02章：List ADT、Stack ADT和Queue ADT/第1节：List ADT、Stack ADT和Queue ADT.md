@@ -18,25 +18,36 @@ Queue ADT是一种操作受限制的List ADT，这种List ADT的一端称为rear
 
 ##### List ADT的操作
 
-
+- printList
+- makeEmpty
+- find
+- findKth
+- insert
+- remove
 
 ##### Stack ADT的操作
 
-
+- push
+- pop
 
 ##### Queue ADT的操作
 
-
+- enqueue
+- dequeue
 
 ### 应用
 
 ##### List ADT的应用
 
-
+- 略。
 
 ##### Stack ADT的应用
 
-
+- 平衡符号
+- 后缀表达式
+- 中缀到后缀的转换
+- 方法调用
 
 ##### Queue ADT的应用
 
+- 略
