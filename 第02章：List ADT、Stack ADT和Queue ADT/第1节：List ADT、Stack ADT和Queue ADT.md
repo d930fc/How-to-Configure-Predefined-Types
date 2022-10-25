@@ -10,7 +10,27 @@ Queue ADT是一种操作受限制的List ADT，这种List ADT的一端称为fron
 
 ### 操作
 
+##### List ADT的操作
+
+
+
+##### Stack ADT的操作
+
+
+
+##### Queue ADT的操作
+
 
 
 ### 应用
+
+##### List ADT的应用
+
+
+
+##### Stack ADT的应用
+
+
+
+##### Queue ADT的应用
 
