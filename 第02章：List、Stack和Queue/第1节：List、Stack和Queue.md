@@ -1,4 +1,4 @@
-# List ADT、Stack ADT和Queue ADT
+# List、Stack和Queue
 
 ### 结构
 
