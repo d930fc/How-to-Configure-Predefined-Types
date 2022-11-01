@@ -1,8 +1,8 @@
-# Collection ADT和Iterable Collection ADT
+# Collection和Iterable Collection
 
 ### 结构
 
-##### Collection ADT的结构
+##### Collection的结构
 
 Collection ADT是一种内含多个元素的ADT。
 
