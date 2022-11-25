@@ -25,7 +25,6 @@ Collection ADT是一种内含多个元素的ADT。
 ##### Iterable Collection ADT的操作
 
 
-
 ### 应用
 
 ##### Collection ADT的应用
