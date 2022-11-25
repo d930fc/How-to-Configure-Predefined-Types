@@ -53,3 +53,5 @@ Queue ADT是一种操作受限制的List ADT，这种List ADT的一端称为rear
 ##### Queue ADT的应用
 
 - 排队
+
+
