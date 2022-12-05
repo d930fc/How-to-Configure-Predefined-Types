@@ -17,7 +17,7 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
     doClear();
   }
 
-  public void doClear() {
+  private void doClear() {
     theSize = 0;
     ensureCapacity(DEFAULT_CAPACITY);
   }
@@ -36,11 +36,13 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
 
   public AnyType get(int idx) {
     if (idx < 0 || idx >= size()) throw new java.lang.ArrayIndexOutOfBoundsException();
+
     return theItems[idx];
   }
 
   public AnyType set(int idx, AnyType newVal) {
     if (idx < 0 || idx >= size()) throw new java.lang.ArrayIndexOutOfBoundsException();
+
     AnyType old = theItems[idx];
     theItems[idx] = newVal;
     return old;
@@ -48,6 +50,7 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
 
   public void ensureCapacity(int newCapacity) {
     if (newCapacity < theSize) return;
+
     AnyType[] old = theItems;
     theItems = (AnyType[]) new Object[newCapacity];
     for (int i = 0; i < size(); i++) theItems[i] = old[i];
@@ -62,12 +65,14 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
     if (theItems.length == size()) ensureCapacity(size() * 2 + 1);
     for (int i = theSize; i > idx; i--) theItems[i] = theItems[i - 1];
     theItems[idx] = x;
+
     theSize++;
   }
 
   public AnyType remove(int idx) {
     AnyType removedItem = theItems[idx];
     for (int i = idx; i < size() - 1; i++) theItems[i] = theItems[i + 1];
+
     theSize--;
     return removedItem;
   }
@@ -85,6 +90,7 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
 
     public AnyType next() {
       if (!hasNext()) throw new java.util.NoSuchElementException();
+
       return theItems[current++];
     }
 
