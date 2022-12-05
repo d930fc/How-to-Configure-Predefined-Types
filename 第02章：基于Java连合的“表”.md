@@ -1,9 +1,5 @@
 # 基于Java连合的“表”
 
-Java连合是一种有序集合，Java连合使用链接表示次序。
-
-对于单向连合，只能从前向后查找，对于双向连合，额外可以从后向前查找。
-
 ```java
 public class MyLinkedList<AnyType> implements Iterable<AnyType> {
   private static class Node<AnyType> {
