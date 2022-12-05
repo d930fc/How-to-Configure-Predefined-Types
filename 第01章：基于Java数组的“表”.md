@@ -4,6 +4,8 @@ Java数组是一种有序集合，Java数组使用位置表示次序。
 
 ```java
 public class MyArrayList<AnyType> implements Iterable<AnyType> {
+  public static final int DEFAULT_CAPACITY = 10;
+
   private int theSize;
   private AnyType[] theItems;
 
@@ -33,13 +35,12 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
   }
 
   public AnyType get(int idx) {
-    if (idx < 0 || idx >= size()) throw new ArrayIndexOutOfBoundsException();
-
+    if (idx < 0 || idx >= size()) throw new java.lang.ArrayIndexOutOfBoundsException();
     return theItems[idx];
   }
 
   public AnyType set(int idx, AnyType newVal) {
-    if (idx < 0 || idx >= size()) throw new ArrayIndexOutOfBoundException();
+    if (idx < 0 || idx >= size()) throw new java.lang.ArrayIndexOutOfBoundsException();
     AnyType old = theItems[idx];
     theItems[idx] = newVal;
     return old;
@@ -72,7 +73,7 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
   }
 
   public java.util.Iterator<AnyType> iterator() {
-    return new ArryaListIterator();
+    return new ArrayListIterator();
   }
 
   private class ArrayListIterator implements java.util.Iterator<AnyType> {
