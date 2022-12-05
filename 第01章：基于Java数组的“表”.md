@@ -3,7 +3,6 @@
 ```java
 public class MyArrayList<AnyType> implements Iterable<AnyType> {
   public static final int DEFAULT_CAPACITY = 10;
-
   private int theSize;
   private AnyType[] theItems;
 
