@@ -1,6 +1,6 @@
 # 基于Java数组的“表”
 
-```
+```java
 public class MyArrayList<AnyType> implements Iterable<AnyType> {
   private int theSize;
   private AnyType[] theItems;
