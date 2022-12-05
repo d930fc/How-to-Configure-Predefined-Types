@@ -114,7 +114,6 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
    */
   private Node<AnyType> getNode(int idx, int lower, int upper) {
     Node<AnyType> p;
-
     if (idx < lower || idx > upper) throw new IndexOutOfBoundsException();
 
     if (idx < size() / 2) {
