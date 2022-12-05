@@ -93,7 +93,6 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
     p.prev.next = p.next;
     theSize--;
     modCount++;
-
     return p.data;
   }
 
@@ -149,7 +148,6 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
     public AnyType next() {
       if (modCount != expectedModCount) throw new java.util.ConcurrentModificationException();
       if (!hasNext()) throw new java.util.NoSuchElementException();
-
       AnyType nextItem = current.data;
       current = current.next;
       okToRemove = true;
@@ -159,7 +157,6 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
     public void remove() {
       if (modCount != expectedModCount) throw new java.util.ConcurrentModificationException();
       if (!okToRemove) throw new IllegalStateException();
-
       MyLinkedList.this.remove(current.prev);
       expectedModCount++;
       okToRemove = false;
