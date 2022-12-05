@@ -1,5 +1,7 @@
 # 基于Java数组的“表”
 
+Java数组是一种有序集合，Java数组使用位置表示次序。
+
 ```java
 public class MyArrayList<AnyType> implements Iterable<AnyType> {
   private int theSize;
@@ -38,7 +40,6 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
 
   public AnyType set(int idx, AnyType newVal) {
     if (idx < 0 || idx >= size()) throw new ArrayIndexOutOfBoundException();
-
     AnyType old = theItems[idx];
     theItems[idx] = newVal;
     return old;
@@ -46,7 +47,6 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
 
   public void ensureCapacity(int newCapacity) {
     if (newCapacity < theSize) return;
-
     AnyType[] old = theItems;
     theItems = (AnyType[]) new Object[newCapacity];
     for (int i = 0; i < size(); i++) theItems[i] = old[i];
@@ -60,7 +60,6 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
   public void add(int idx, AnyType x) {
     if (theItems.length == size()) ensureCapacity(size() * 2 + 1);
     for (int i = theSize; i > idx; i--) theItems[i] = theItems[i - 1];
-
     theItems[idx] = x;
     theSize++;
   }
@@ -68,7 +67,6 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
   public AnyType remove(int idx) {
     AnyType removedItem = theItems[idx];
     for (int i = idx; i < size() - 1; i++) theItems[i] = theItems[i + 1];
-
     theSize--;
     return removedItem;
   }
@@ -90,9 +88,10 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
     }
 
     public void remove() {
-
       MyArrayList.this.remove(--current);
     }
   }
 }
 ```
+
+为了把精力集中在编写迭代器类的基本方面，我们不检测可能使得迭代器无效的结构上的修改，也不检测非法的迭代器remove方法。
