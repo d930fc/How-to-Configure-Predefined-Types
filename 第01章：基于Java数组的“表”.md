@@ -1,7 +1,5 @@
 # 基于Java数组的“表”
 
-Java数组是一种有序集合，Java数组使用位置表示次序。
-
 ```java
 public class MyArrayList<AnyType> implements Iterable<AnyType> {
   public static final int DEFAULT_CAPACITY = 10;
