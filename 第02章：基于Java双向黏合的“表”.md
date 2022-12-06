@@ -1,4 +1,4 @@
-# 基于Java黏合的“表”
+# 基于Java双向黏合的“表”
 
 ```java
 public class MyLinkedList<AnyType> implements Iterable<AnyType> {
