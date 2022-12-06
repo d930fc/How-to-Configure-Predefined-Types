@@ -164,5 +164,3 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
   private Node<AnyType> endMarker;
 }
 ```
-
-为了把精力集中在编写迭代器类的基本方面，我们不检测可能使得迭代器无效的结构上的修改，也不检测非法的迭代器remove方法。
