@@ -1,4 +1,4 @@
-# 基于Java数组的“表”
+# 基于Java变长数组的“表”
 
 ```java
 public class MyArrayList<AnyType> implements Iterable<AnyType> {
