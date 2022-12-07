@@ -1,5 +1,7 @@
 # 基于Java变长数组的“表”
 
+形如A<sub>0</sub>，A<sub>1</sub>，A<sub>2</sub>，…，A<sub>N-1</sub>的数据结构称为表，表中不存在空闲的位置，插入操作和删除操作可以发生在表中任意位置。
+
 ```java
 public class MyArrayList<AnyType> implements Iterable<AnyType> {
   public static final int DEFAULT_CAPACITY = 10;
