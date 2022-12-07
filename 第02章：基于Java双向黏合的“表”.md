@@ -1,5 +1,7 @@
 # 基于Java双向黏合的“表”
 
+形如A<sub>0</sub>，A<sub>1</sub>，A<sub>2</sub>，…，A<sub>N-1</sub>的数据结构称为表，表中不存在空闲的位置，插入操作和删除操作可以发生在表中任意位置。
+
 ```java
 public class MyLinkedList<AnyType> implements Iterable<AnyType> {
   private static class Node<AnyType> {
@@ -164,3 +166,5 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
   private Node<AnyType> endMarker;
 }
 ```
+
+这些额外的节点有时候就叫做**标记节点（sentinel node）**；特别地，在前端的节点有时候也叫做**头节点（header node）**，而在末端的节点有时候也叫做**尾节点（tail node）**。使用这些额外节点的优点在于，通过排除许多特殊情形而极大地简化了编码。
