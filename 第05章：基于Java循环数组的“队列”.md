@@ -1,3 +1,9 @@
 # 基于Java循环数组的“队列”
 
 插入操作和删除操作分别固定发生在表的一端的表称为队列。执行插入的那一端称为队尾，执行删除的那一端称为队头。插入称为enqueue，删除称为dequeue。
+
+对于每一个队列数据结构，我们保留一个数组theArray以及位置front和back，它们代表队列的两端。我们还要记录实际存在于队列中的元素的个数currentSize。
+
+为使一个元素x入队（即执行enqueue），我们让currentSize和back增1，然后置theArray[back]=x。若使元素dequeue（出队），我们置返回值为theArray[front]，且currentSize减1，然后使front增1。
+
+只要front或back到达数组的尾端，它就又绕回到开头。
