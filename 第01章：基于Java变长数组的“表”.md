@@ -5,6 +5,7 @@
 ```java
 public class MyArrayList<AnyType> implements Iterable<AnyType> {
   public static final int DEFAULT_CAPACITY = 10;
+
   private int theSize;
   private AnyType[] theItems;
 
@@ -16,7 +17,7 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
     doClear();
   }
 
-  private void doClear() {
+  public void doClear() {
     theSize = 0;
     ensureCapacity(DEFAULT_CAPACITY);
   }
@@ -35,11 +36,13 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
 
   public AnyType get(int idx) {
     if (idx < 0 || idx >= size()) throw new java.lang.ArrayIndexOutOfBoundsException();
+
     return theItems[idx];
   }
 
   public AnyType set(int idx, AnyType newVal) {
     if (idx < 0 || idx >= size()) throw new java.lang.ArrayIndexOutOfBoundsException();
+
     AnyType old = theItems[idx];
     theItems[idx] = newVal;
     return old;
@@ -47,6 +50,7 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
 
   public void ensureCapacity(int newCapacity) {
     if (newCapacity < theSize) return;
+
     AnyType[] old = theItems;
     theItems = (AnyType[]) new Object[newCapacity];
     for (int i = 0; i < size(); i++) theItems[i] = old[i];
