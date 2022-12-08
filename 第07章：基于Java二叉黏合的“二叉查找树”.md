@@ -170,7 +170,7 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
     } else if (t.left != null && t.right != null) { // Two children
       t.element = findMin(t.right).element;
       t.right = remove(t.element, t.right);
-    } else {
+    } else { // One child
       t = (t.left != null) ? t.left : t.right;
     }
 
