@@ -11,7 +11,6 @@ public class UnderflowException extends java.lang.RuntimeException {}
 ```java
 package tree;
 
-
 public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
   private static class BinaryNode<AnyType> {
     // Constructors
