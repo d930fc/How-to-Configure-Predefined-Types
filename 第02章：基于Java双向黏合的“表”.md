@@ -116,6 +116,7 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
    */
   private Node<AnyType> getNode(int idx, int lower, int upper) {
     Node<AnyType> p;
+
     if (idx < lower || idx > upper) throw new IndexOutOfBoundsException();
 
     if (idx < size() / 2) {
@@ -145,6 +146,7 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
     public AnyType next() {
       if (modCount != expectedModCount) throw new java.util.ConcurrentModificationException();
       if (!hasNext()) throw new java.util.NoSuchElementException();
+
       AnyType nextItem = current.data;
       current = current.next;
       okToRemove = true;
@@ -154,6 +156,7 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
     public void remove() {
       if (modCount != expectedModCount) throw new java.util.ConcurrentModificationException();
       if (!okToRemove) throw new IllegalStateException();
+
       MyLinkedList.this.remove(current.prev);
       expectedModCount++;
       okToRemove = false;
