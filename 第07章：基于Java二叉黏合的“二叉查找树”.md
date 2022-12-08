@@ -3,6 +3,15 @@
 我的左儿子和他的任意后代都不如我，我的右儿子和他的任意后代都胜过我，那么我代表二叉查找树中的任意一个节点。
 
 ```java
+package tree;
+
+public class UnderflowException extends java.lang.RuntimeException {}
+```
+
+```java
+package tree;
+
+
 public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
   private static class BinaryNode<AnyType> {
     // Constructors
@@ -40,13 +49,13 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
   }
 
   public AnyType findMin() {
-    if (isEmpty()) throw new java.lang.RuntimeException();
+    if (isEmpty()) throw new UnderflowException();
 
     return findMin(root).element;
   }
 
   public AnyType findMax() {
-    if (isEmpty()) throw new java.lang.RuntimeException();
+    if (isEmpty()) throw new UnderflowException();
 
     return findMax(root).element;
   }
