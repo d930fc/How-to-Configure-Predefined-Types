@@ -1,6 +1,10 @@
 # 基于Java双向黏合的“表”
 
+### 表
+
 形如A<sub>0</sub>，A<sub>1</sub>，A<sub>2</sub>，…，A<sub>N-1</sub>的数据结构称为表。一张表中可供插入的位置有N+1个，可供删除的位置有N个。
+
+### MyLinkedList类
 
 ```java
 /**
