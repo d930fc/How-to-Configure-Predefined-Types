@@ -344,3 +344,5 @@ public class QuadraticProbingHashTable<AnyType>
 
 }
 ```
+
+探测散列可以软删除项，不可以硬删除项，否则contains操作无法返回正确的结果。
