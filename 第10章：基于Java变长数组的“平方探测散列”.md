@@ -18,6 +18,8 @@ h<sub>2</sub> = (hash(x) + f(2)) % TableSize<br/>
 …<br/>
 h<sub>i</sub> = (hash(x) + f(i)) % TableSize<br/>
 
+探测散列的remove操作可以软删除，不可以硬删除，否则contains操作无法返回正确的结果。
+
 ### 平方探测散列
 
 平方探测就是f(x)为二次的探测方法。流行的选择是f(i)=i<sup>2</sup>。
