@@ -2,7 +2,7 @@
 
 ### 表
 
-形如A<sub>0</sub>，A<sub>1</sub>，A<sub>2</sub>，…，A<sub>N-1</sub>的数据结构称为表。表中有N+1个位置可以插入、N个元素可以删除。
+形如A<sub>0</sub>，A<sub>1</sub>，A<sub>2</sub>，…，A<sub>N-1</sub>的数据结构称为表，表中的每一个元素都有一个序号。表中有N+1个位置可以插入、N个元素可以删除。
 
 ### MyLinkedList类
 
