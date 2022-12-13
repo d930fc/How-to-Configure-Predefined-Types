@@ -2,7 +2,7 @@
 
 ### 表
 
-形如A<sub>0</sub>，A<sub>1</sub>，A<sub>2</sub>，…，A<sub>N-1</sub>的数据结构称为表。一张表中可供插入的位置有N+1个，可供删除的位置有N个。
+形如A<sub>0</sub>，A<sub>1</sub>，A<sub>2</sub>，…，A<sub>N-1</sub>的数据结构称为表。表中有N+1个位置可以插入、N个元素可以删除。
 
 ### MyArrayList类
 
