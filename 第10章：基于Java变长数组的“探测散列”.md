@@ -18,6 +18,8 @@ h<sub>2</sub> = (hash(x) + f(2)) % TableSize<br/>
 …<br/>
 h<sub>i</sub> = (hash(x) + f(i)) % TableSize<br/>
 
+探测散列可以软删除项，不可以硬删除项，否则contains操作将无法返回正确的结果。
+
 ### 线性探测散列
 
 线性探测散列的f(i)是一次函数。流行的选择是f(i)=i。
@@ -344,5 +346,3 @@ public class QuadraticProbingHashTable<AnyType>
 
 }
 ```
-
-探测散列可以软删除项，不可以硬删除项，否则contains操作将无法返回正确的结果。
