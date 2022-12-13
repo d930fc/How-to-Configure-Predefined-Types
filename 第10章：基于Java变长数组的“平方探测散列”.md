@@ -10,7 +10,7 @@
 
 ### 探测散列
 
-探测散列依次尝试h<sub>0</sub>，h<sub>1</sub>，h<sub>2</sub>，…，h<sub>i</sub>以确定一个值的地址。
+探测散列依次尝试h<sub>0</sub>，h<sub>1</sub>，h<sub>2</sub>，…，h<sub>i</sub>以确定一个值对应的地址。
 
 h<sub>0</sub> = (hash(x) + f(0)) % TableSize<br/>
 h<sub>1</sub> = (hash(x) + f(1)) % TableSize<br/>
