@@ -22,7 +22,7 @@ h<sub>i</sub> = (hash(x) + f(i)) % TableSize<br/>
 
 ### 平方探测散列
 
-平方探测散列的f(i)是一次函数。流行的选择是f(i)=i<sup>2</sup>。
+平方探测散列的f(i)是二次函数。流行的选择是f(i)=i<sup>2</sup>。
 
 f(0) = 0<br/>
 f(1) = 1<br/>
