@@ -1,4 +1,4 @@
-# 基于Java变长数组的“平方探测散列”
+# 基于Java变长数组的“探测散列”
 
 ### 散列
 
@@ -18,7 +18,15 @@ h<sub>2</sub> = (hash(x) + f(2)) % TableSize<br/>
 …<br/>
 h<sub>i</sub> = (hash(x) + f(i)) % TableSize<br/>
 
-探测散列的remove操作可以软删除，不可以硬删除，否则contains操作无法返回正确的结果。
+### 线性探测散列
+
+线性探测散列的f(i)是一次函数。流行的选择是f(i)=i。
+
+f(0) = 0<br/>
+f(1) = 1<br/>
+f(2) = 2<br/>
+…<br/>
+f(i) = i<br/>
 
 ### 平方探测散列
 
@@ -29,6 +37,16 @@ f(1) = 1<br/>
 f(2) = 4<br/>
 …<br/>
 f(i) = i<sup>2</sup><br/>
+
+### 双散列
+
+双散列的f(i)是一个哈希函数。流行的选择是f(i)=i·hash<sub>2</sub>(x)。
+
+f(0) = 0<br/>
+f(1) = 1·hash<sub>2</sub>(x)<br/>
+f(2) = 2·hash<sub>2</sub>(x)<br/>
+…<br/>
+f(i) = i·hash<sub>2</sup>(x)<br/>
 
 ### QuadraticProbingHashTable类
 
