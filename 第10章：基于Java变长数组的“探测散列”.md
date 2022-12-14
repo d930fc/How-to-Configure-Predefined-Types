@@ -42,8 +42,6 @@ f(2) = 4<br/>
 …<br/>
 f(i) = i<sup>2</sup><br/>
 
-单散列的缺点是聚集耗时。
-
 ### 双散列
 
 双散列的f(i)是一个哈希函数。流行的选择是f(i)=i·hash<sub>2</sub>(x)。
@@ -53,8 +51,6 @@ f(1) = 1·hash<sub>2</sub>(x)<br/>
 f(2) = 2·hash<sub>2</sub>(x)<br/>
 …<br/>
 f(i) = i·hash<sub>2</sup>(x)<br/>
-
-双散列的缺点是计算耗时。
 
 ### QuadraticProbingHashTable类
 
