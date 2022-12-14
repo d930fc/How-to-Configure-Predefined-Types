@@ -22,8 +22,6 @@ h<sub>2</sub> = (hash(x) + f(2)) % TableSize<br/>
 …<br/>
 h<sub>i</sub> = (hash(x) + f(i)) % TableSize<br/>
 
-探测散列执行软删除，不执行硬删除，硬删除会导致contains操作失败。
-
 ### 单散列
 
 线性探测散列的f(i)是一次函数。流行的选择是f(i)=i。
