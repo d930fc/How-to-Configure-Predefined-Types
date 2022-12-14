@@ -18,7 +18,7 @@ h<sub>2</sub> = (hash(x) + f(2)) % TableSize<br/>
 …<br/>
 h<sub>i</sub> = (hash(x) + f(i)) % TableSize<br/>
 
-探测散列可以软删除项，不可以硬删除项，否则contains操作将无法返回正确的结果。
+探测散列执行软删除，不执行硬删除，硬删除会导致contains操作失败。
 
 ### 线性探测散列
 
