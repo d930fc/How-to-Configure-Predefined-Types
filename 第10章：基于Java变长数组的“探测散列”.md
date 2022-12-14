@@ -24,16 +24,14 @@ h<sub>i</sub> = (hash(x) + f(i)) % TableSize<br/>
 
 ### 单散列
 
-线性探测散列的f(i)是一次函数。流行的选择是f(i)=i。
-
+线性探测散列的f(i)是一次函数。流行的选择是f(i)=i。<br/>
 f(0) = 0<br/>
 f(1) = 1<br/>
 f(2) = 2<br/>
 …<br/>
 f(i) = i<br/>
 
-平方探测散列的f(i)是二次函数。流行的选择是f(i)=i<sup>2</sup>。
-
+平方探测散列的f(i)是二次函数。流行的选择是f(i)=i<sup>2</sup>。<br/>
 f(0) = 0<br/>
 f(1) = 1<br/>
 f(2) = 4<br/>
@@ -44,8 +42,7 @@ f(i) = i<sup>2</sup><br/>
 
 ### 双散列
 
-双散列的f(i)是一个哈希函数。流行的选择是f(i)=i·hash<sub>2</sub>(x)。
-
+双散列的f(i)是一个哈希函数。流行的选择是f(i)=i·hash<sub>2</sub>(x)。<br/>
 f(0) = 0<br/>
 f(1) = 1·hash<sub>2</sub>(x)<br/>
 f(2) = 2·hash<sub>2</sub>(x)<br/>
