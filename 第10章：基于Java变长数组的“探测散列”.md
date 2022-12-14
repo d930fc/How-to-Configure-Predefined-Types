@@ -8,6 +8,8 @@
 
 散列的地址空间很大而项很少，这种情形称为浪费。
 
+基于项的值构造一个正整数hashCode，并将hashCode%TableSize作为项的地址，可知地址∈\[0, TableSize-1\]。举两个例子：5%2=1，2%5=2。
+
 ### 探测散列
 
 探测散列依次尝试h<sub>0</sub>，h<sub>1</sub>，h<sub>2</sub>，…，h<sub>i</sub>以确定一个值的地址。
