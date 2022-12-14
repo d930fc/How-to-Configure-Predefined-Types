@@ -22,7 +22,7 @@ h<sub>i</sub> = (hash(x) + f(i)) % TableSize<br/>
 
 探测散列执行软删除，不执行硬删除，硬删除会导致contains操作失败。
 
-### 线性探测散列
+### 单散列
 
 线性探测散列的f(i)是一次函数。流行的选择是f(i)=i。
 
@@ -32,8 +32,6 @@ f(2) = 2<br/>
 …<br/>
 f(i) = i<br/>
 
-### 平方探测散列
-
 平方探测散列的f(i)是二次函数。流行的选择是f(i)=i<sup>2</sup>。
 
 f(0) = 0<br/>
@@ -41,6 +39,8 @@ f(1) = 1<br/>
 f(2) = 4<br/>
 …<br/>
 f(i) = i<sup>2</sup><br/>
+
+单散列的缺点是聚集耗时。
 
 ### 双散列
 
@@ -51,6 +51,8 @@ f(1) = 1·hash<sub>2</sub>(x)<br/>
 f(2) = 2·hash<sub>2</sub>(x)<br/>
 …<br/>
 f(i) = i·hash<sub>2</sup>(x)<br/>
+
+双散列的缺点是计算耗时。
 
 ### QuadraticProbingHashTable类
 
