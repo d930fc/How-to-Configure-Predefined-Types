@@ -29,17 +29,6 @@
 ### BinarySearchTree类
 
 ```java
-/**
- * Exception class for access in empty containers
- * such as stacks, queues, and priority queues.
- * @author Mark Allen Weiss
- */
-public class UnderflowException extends RuntimeException
-{
-}
-```
-
-```java
 // BinarySearchTree class
 //
 // CONSTRUCTION: with no initializer
@@ -329,6 +318,19 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>>
                 System.out.println( "Find error2!" );
         }
     }
+}
+```
+
+### UnderflowException类
+
+```java
+/**
+ * Exception class for access in empty containers
+ * such as stacks, queues, and priority queues.
+ * @author Mark Allen Weiss
+ */
+public class UnderflowException extends RuntimeException
+{
 }
 ```
 
