@@ -26,19 +26,6 @@
 
 ![图4-15](./图04-15.png)
 
-### UnderflowException类
-
-```java
-/**
- * Exception class for access in empty containers
- * such as stacks, queues, and priority queues.
- * @author Mark Allen Weiss
- */
-public class UnderflowException extends RuntimeException
-{
-}
-```
-
 ### BinarySearchTree类
 
 ```java
@@ -334,6 +321,19 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>>
 }
 ```
 
+### UnderflowException类
+
+```java
+/**
+ * Exception class for access in empty containers
+ * such as stacks, queues, and priority queues.
+ * @author Mark Allen Weiss
+ */
+public class UnderflowException extends RuntimeException
+{
+}
+```
+
 为了将X插入到树T中，你可以像用contains那样沿着树查找。如果找到X，则什么也不用做（或做一些“更新”）。否则，将X插入到遍历的路径上的最后一点上。
 
 重复元的插入可以通过在节点记录中保留一个附加域以指示发生的频率来处理。
@@ -347,3 +347,5 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>>
 ![图4-24](./图04-24.png)
 
 这特别是在有重复项时很常用，因为此时记录出现频率数的域可以减1。
+
+
