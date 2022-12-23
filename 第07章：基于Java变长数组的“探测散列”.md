@@ -346,5 +346,3 @@ public class QuadraticProbingHashTable<AnyType>
 
 }
 ```
-
-
