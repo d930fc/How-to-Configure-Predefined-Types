@@ -2,7 +2,7 @@
 
 ### 表
 
-形如A<sub>0</sub>，A<sub>1</sub>，A<sub>2</sub>，…，A<sub>N-1</sub>的数据结构称为表，并规定插入操作和删除操作可以发生在表的两端或者表的内部。插入称为add，删除称为remove。
+形如A<sub>0</sub>，A<sub>1</sub>，A<sub>2</sub>，…，A<sub>N-1</sub>的有序集合称为表，并规定插入操作和删除操作可以发生在表的两端或者表的内部。插入称为add，删除称为remove。
 
 ### MyArrayList类
 
