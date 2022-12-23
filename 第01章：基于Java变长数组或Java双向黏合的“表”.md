@@ -2,7 +2,7 @@
 
 ### 表
 
-形如A<sub>0</sub>，A<sub>1</sub>，A<sub>2</sub>，…，A<sub>N-1</sub>的数据结构称为表，表中每一个元素都有一个序号。
+形如A<sub>0</sub>，A<sub>1</sub>，A<sub>2</sub>，…，A<sub>N-1</sub>的数据结构称为表，插入操作和删除操作可以发生在两端或者中间。插入称为add，删除称为remove。
 
 ### MyArrayList类
 
