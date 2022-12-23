@@ -40,19 +40,6 @@
 
 双旋转法：让代数多的那个儿的儿做族长，让旧族长和新族长原来的父亲当新族长的儿，然后把新族长原来的两个儿分别送给现在的两个儿当儿。
 
-### UnderflowException类
-
-```java
-/**
- * Exception class for access in empty containers
- * such as stacks, queues, and priority queues.
- * @author Mark Allen Weiss
- */
-public class UnderflowException extends RuntimeException
-{
-}
-```
-
 ### AvlTree类
 
 ```java
@@ -460,3 +447,18 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>>
     }
 }
 ```
+
+### UnderflowException类
+
+```java
+/**
+ * Exception class for access in empty containers
+ * such as stacks, queues, and priority queues.
+ * @author Mark Allen Weiss
+ */
+public class UnderflowException extends RuntimeException
+{
+}
+```
+
+
