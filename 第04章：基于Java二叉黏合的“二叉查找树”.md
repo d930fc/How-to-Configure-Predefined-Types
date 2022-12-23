@@ -347,5 +347,3 @@ public class UnderflowException extends RuntimeException
 ![图4-24](./图04-24.png)
 
 这特别是在有重复项时很常用，因为此时记录出现频率数的域可以减1。
-
-
