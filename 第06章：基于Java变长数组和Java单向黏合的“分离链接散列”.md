@@ -18,7 +18,8 @@
 
 ### SeparateChainingHashTable类
 
-```javaimport java.util.LinkedList;
+```java
+import java.util.LinkedList;
 import java.util.List;
 
 // SeparateChaining Hash table class
