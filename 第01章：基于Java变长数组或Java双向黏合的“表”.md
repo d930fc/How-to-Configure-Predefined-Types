@@ -4,7 +4,7 @@
 
 形如A<sub>0</sub>，A<sub>1</sub>，A<sub>2</sub>，…，A<sub>N-1</sub>的有序集合称为表，插入操作和删除操作可以发生在表的两端和内部。
 
-插入称为add，删除称为remove。
+插入操作称为add，删除操作称为remove。
 
 ### MyArrayList类
 
