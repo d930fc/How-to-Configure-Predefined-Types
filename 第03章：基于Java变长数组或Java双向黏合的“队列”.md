@@ -4,7 +4,7 @@
 
 形如A<sub>0</sub>，A<sub>1</sub>，A<sub>2</sub>，…，A<sub>N-1</sub>的有序集合称为队列，规定插入操作和删除操作只能分别固定发生在队列的一端，执行插入的一端称为队尾，执行删除的一端称为队头。
 
-其中，插入称为enqueue，删除称为dequeue。
+插入称为enqueue，删除称为dequeue。
 
 ### MyArrayQueue类
 
