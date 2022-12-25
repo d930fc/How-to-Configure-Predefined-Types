@@ -2,7 +2,9 @@
 
 ### 栈
 
-形如A<sub>0</sub>，A<sub>1</sub>，A<sub>2</sub>，…，A<sub>N-1</sub>的有序集合称为栈，规定插入操作和删除操作只能固定发生在栈的一端，该端称为栈顶。其中，插入称为push，删除称为pop。
+形如A<sub>0</sub>，A<sub>1</sub>，A<sub>2</sub>，…，A<sub>N-1</sub>的有序集合称为栈，规定插入操作和删除操作只能固定发生在栈的一端，该端称为栈顶。
+
+其中，插入称为push，删除称为pop。
 
 ### MyArrayStack类
 
