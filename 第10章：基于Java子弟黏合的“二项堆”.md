@@ -6,7 +6,7 @@
 
 ![图6-35](./图06-35.png)
 
-一个B<sub>0</sub>只有一个节点；一个B<sub>1</sub>由两个B<sub>0</sub>组成，且一个B<sub>0</sub>连接到另一个B<sub>0</sub>的根节点上；一个B<sub>2</sub>由两个B<sub>1</sub>组成，且一个B<sub>1</sub>连接到另一个B<sub>1</sub>的根节点上；一个B<sub>k</sub>由两个B<sub>k-1</sub>组成，且一个B<sub>k-1</sub>连接到另一个B<sub>k-1</sub>的根节点上。这样的树称为二项树。
+一个B<sub>0</sub>只有一个节点；一个B<sub>1</sub>由两个B<sub>0</sub>组成，且一个B<sub>0</sub>连接到另一个B<sub>0</sub>的根节点上；一个B<sub>2</sub>由两个B<sub>1</sub>组成，且一个B<sub>1</sub>连接到另一个B<sub>1</sub>的根节点上；以此类推，一个B<sub>k</sub>由两个B<sub>k-1</sub>组成，且一个B<sub>k-1</sub>连接到另一个B<sub>k-1</sub>的根节点上，这样的树称为二项树。
 
 ![图6-34](./图06-34.png)
 
