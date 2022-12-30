@@ -2,12 +2,18 @@
 
 ### 二项堆
 
+第一，二项堆是二项树的森林，二项堆中的二项树高度各异，第二，二项堆中任意节点的值小于这个节点的儿的值。
+
+![图6-35](./图06-35.png)
+
+一个B<sub>0</sub>只有一个节点；一个B<sub>1</sub>由两个B<sub>0</sub>组成，且第二个B<sub>0</sub>连接到第一个B<sub>0</sub>的根节点上；一个B<sub>2</sub>由两个B<sub>1</sub>组成，且第二个B<sub>1</sub>连接到第一个B<sub>1</sub>的根节点上；一个B<sub>k</sub>由两个B<sub>k-1</sub>组成，且第二个B<sub>k-1</sub>连接到第一个B<sub>k-1</sub>的根节点上。这样的树成为二项树。
+
 ![图6-34](./图06-34.png)
 
-### BinomialQueue类
+### BinomialHeap类
 
 ```java
-// BinomialQueue class
+// BinomialHeap class
 //
 // CONSTRUCTION: with no parameters or a single item
 //
@@ -22,16 +28,16 @@
 // Throws UnderflowException as appropriate
 
 /**
- * Implements a binomial queue.
+ * Implements a binomial heap.
  * Note that all "matching" is based on the compareTo method.
  * @author Mark Allen Weiss
  */
-public final class BinomialQueue<AnyType extends Comparable<? super AnyType>>
+public final class BinomialHeap<AnyType extends Comparable<? super AnyType>>
 {
     /**
-     * Construct the binomial queue.
+     * Construct the binomial heap.
      */
-    public BinomialQueue( )
+    public BinomialHeap( )
     {
         theTrees = new BinNode[ DEFAULT_TREES ];
         makeEmpty( );
@@ -40,7 +46,7 @@ public final class BinomialQueue<AnyType extends Comparable<? super AnyType>>
     /**
      * Construct with a single item.
      */
-    public BinomialQueue( AnyType item ) 
+    public BinomialHeap( AnyType item ) 
     {
         currentSize = 1;
         theTrees = new BinNode[ 1 ];
@@ -63,9 +69,9 @@ public final class BinomialQueue<AnyType extends Comparable<? super AnyType>>
     /**
      * Merge rhs into the priority queue.
      * rhs becomes empty. rhs must be different from this.
-     * @param rhs the other binomial queue.
+     * @param rhs the other binomial heap.
      */
-    public void merge( BinomialQueue<AnyType> rhs )
+    public void merge( BinomialHeap<AnyType> rhs )
     {
         if( this == rhs )    // Avoid aliasing problems
             return;
@@ -145,7 +151,7 @@ public final class BinomialQueue<AnyType extends Comparable<? super AnyType>>
      */
     public void insert( AnyType x )
     {
-        merge( new BinomialQueue<>( x ) );
+        merge( new BinomialHeap<>( x ) );
     }
 
     /**
@@ -197,7 +203,7 @@ public final class BinomialQueue<AnyType extends Comparable<? super AnyType>>
         BinNode<AnyType> deletedTree = theTrees[ minIndex ].leftChild;
 
         // Construct H''
-        BinomialQueue<AnyType> deletedQueue = new BinomialQueue<>( );
+        BinomialHeap<AnyType> deletedQueue = new BinomialHeap<>( );
         deletedQueue.expandTheTrees( minIndex );
         
         deletedQueue.currentSize = ( 1 << minIndex ) - 1;
@@ -273,8 +279,8 @@ public final class BinomialQueue<AnyType extends Comparable<? super AnyType>>
     public static void main( String [ ] args )
     {
         int numItems = 10000;
-        BinomialQueue<Integer> h  = new BinomialQueue<>( );
-        BinomialQueue<Integer> h1 = new BinomialQueue<>( );
+        BinomialHeap<Integer> h  = new BinomialHeap<>( );
+        BinomialHeap<Integer> h1 = new BinomialHeap<>( );
         int i = 37;
 
         System.out.println( "Starting check." );
