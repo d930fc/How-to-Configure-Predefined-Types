@@ -6,7 +6,7 @@
 
 ![图6-35](./图06-35.png)
 
-一个B<sub>0</sub>只有一个节点；一个B<sub>1</sub>由两个B<sub>0</sub>组成，且第二个B<sub>0</sub>连接到第一个B<sub>0</sub>的根节点上；一个B<sub>2</sub>由两个B<sub>1</sub>组成，且第二个B<sub>1</sub>连接到第一个B<sub>1</sub>的根节点上；一个B<sub>k</sub>由两个B<sub>k-1</sub>组成，且第二个B<sub>k-1</sub>连接到第一个B<sub>k-1</sub>的根节点上。这样的树成为二项树。
+一个B<sub>0</sub>只有一个节点；一个B<sub>1</sub>由两个B<sub>0</sub>组成，且一个B<sub>0</sub>连接到另一个B<sub>0</sub>的根节点上；一个B<sub>2</sub>由两个B<sub>1</sub>组成，且一个B<sub>1</sub>连接到另一个B<sub>1</sub>的根节点上；一个B<sub>k</sub>由两个B<sub>k-1</sub>组成，且一个B<sub>k-1</sub>连接到另一个B<sub>k-1</sub>的根节点上。这样的树称为二项树。
 
 ![图6-34](./图06-34.png)
 
@@ -203,22 +203,22 @@ public final class BinomialHeap<AnyType extends Comparable<? super AnyType>>
         BinNode<AnyType> deletedTree = theTrees[ minIndex ].leftChild;
 
         // Construct H''
-        BinomialHeap<AnyType> deletedQueue = new BinomialHeap<>( );
-        deletedQueue.expandTheTrees( minIndex );
+        BinomialHeap<AnyType> deletedHeap = new BinomialHeap<>( );
+        deletedHeap.expandTheTrees( minIndex );
         
-        deletedQueue.currentSize = ( 1 << minIndex ) - 1;
+        deletedHeap.currentSize = ( 1 << minIndex ) - 1;
         for( int j = minIndex - 1; j >= 0; j-- )
         {
-            deletedQueue.theTrees[ j ] = deletedTree;
+            deletedHeap.theTrees[ j ] = deletedTree;
             deletedTree = deletedTree.nextSibling;
-            deletedQueue.theTrees[ j ].nextSibling = null;
+            deletedHeap.theTrees[ j ].nextSibling = null;
         }
 
         // Construct H'
         theTrees[ minIndex ] = null;
-        currentSize -= deletedQueue.currentSize + 1;
+        currentSize -= deletedHeap.currentSize + 1;
 
-        merge( deletedQueue );
+        merge( deletedHeap );
         
         return minItem;
     }
