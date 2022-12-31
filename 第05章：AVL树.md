@@ -1,4 +1,4 @@
-# 基于Java二叉黏合的“AVL树”
+# AVL树
 
 ### 树
 
@@ -36,7 +36,7 @@ AVL树的平衡办法
 
 双旋转法：让代数多的那个儿的儿做族长，让旧族长和新族长原来的父亲当新族长的儿，然后把新族长原来的两个儿分别送给现在的两个儿当儿。
 
-### AvlTree类
+### 基于Java二叉黏合的AVL树
 
 ```java
 // AvlTree class
@@ -456,3 +456,5 @@ public class UnderflowException extends RuntimeException
 {
 }
 ```
+
+
