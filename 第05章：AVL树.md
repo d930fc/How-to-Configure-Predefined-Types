@@ -444,8 +444,6 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>>
 }
 ```
 
-### UnderflowException类
-
 ```java
 /**
  * Exception class for access in empty containers
