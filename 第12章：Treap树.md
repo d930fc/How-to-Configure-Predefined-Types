@@ -6,6 +6,6 @@
 
 ### 基于Java黏合的Treap树
 
-[Treap.java](http://users.cs.fiu.edu/~weiss/dsaajava3/code/Treap.java)
-
 [UnderflowException.java](http://users.cs.fiu.edu/~weiss/dsaajava3/code/UnderflowException.java)
+
+[Treap.java](http://users.cs.fiu.edu/~weiss/dsaajava3/code/Treap.java)
