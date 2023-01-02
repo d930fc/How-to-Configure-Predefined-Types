@@ -63,7 +63,6 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>>
         root = remove( x, root );
     }
 
-       
     /**
      * Internal method to remove from a subtree.
      * @param x the item to remove.
@@ -351,7 +350,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>>
 
     private static class AvlNode<AnyType>
     {
-            // Constructors
+        // Constructors
         AvlNode( AnyType theElement )
         {
             this( theElement, null, null );
@@ -371,11 +370,10 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>>
         int               height;       // Height
     }
 
-      /** The tree root. */
+    /** The tree root. */
     private AvlNode<AnyType> root;
 
-
-        // Test program
+    // Test program
     public static void main( String [ ] args )
     {
         AvlTree<Integer> t = new AvlTree<>( );
@@ -387,7 +385,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>>
 
         for( int i = GAP; i != 0; i = ( i + GAP ) % NUMS )
         {
-        //    System.out.println( "INSERT: " + i );
+            // System.out.println( "INSERT: " + i );
             t.insert( i );
             if( NUMS < SMALL )
                 t.checkBalance( );
@@ -395,13 +393,15 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>>
         
         for( int i = 1; i < NUMS; i+= 2 )
         {
-         //   System.out.println( "REMOVE: " + i );
+            // System.out.println( "REMOVE: " + i );
             t.remove( i );
             if( NUMS < SMALL )
                 t.checkBalance( );
         }
+        
         if( NUMS < SMALL )
             t.printTree( );
+            
         if( t.findMin( ) != 2 || t.findMax( ) != NUMS - 2 )
             System.out.println( "FindMin or FindMax error!" );
 
