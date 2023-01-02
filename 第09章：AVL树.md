@@ -12,6 +12,6 @@
 
 双旋转法：如果族长的大儿的小儿的代数过多，或者族长的小儿的大儿的代数过多，那么让代数多的那个儿的儿做族长，让旧族长和新族长原来的父亲当新族长的儿，然后把新族长原来的两个儿分别送给现在的两个儿当儿。
 
-[AvlTree.java](http://users.cs.fiu.edu/~weiss/dsaajava3/code/AvlTree.java)
-
 [UnderflowException.java](http://users.cs.fiu.edu/~weiss/dsaajava3/code/UnderflowException.java)
+
+[AvlTree.java](http://users.cs.fiu.edu/~weiss/dsaajava3/code/AvlTree.java)
