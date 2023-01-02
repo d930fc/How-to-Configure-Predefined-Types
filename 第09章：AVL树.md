@@ -87,6 +87,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>>
         }
         else
             t = ( t.left != null ) ? t.left : t.right;
+            
         return balance( t );
     }
     
@@ -98,6 +99,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>>
     {
         if( isEmpty( ) )
             throw new UnderflowException( );
+            
         return findMin( root ).element;
     }
 
@@ -109,6 +111,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>>
     {
         if( isEmpty( ) )
             throw new UnderflowException( );
+            
         return findMax( root ).element;
     }
 
@@ -163,14 +166,14 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>>
                 t = rotateWithLeftChild( t );
             else
                 t = doubleWithLeftChild( t );
-        else
-        if( height( t.right ) - height( t.left ) > ALLOWED_IMBALANCE )
+        else if( height( t.right ) - height( t.left ) > ALLOWED_IMBALANCE )
             if( height( t.right.right ) >= height( t.right.left ) )
                 t = rotateWithRightChild( t );
             else
                 t = doubleWithRightChild( t );
 
         t.height = Math.max( height( t.left ), height( t.right ) ) + 1;
+        
         return t;
     }
     
@@ -216,6 +219,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>>
             t.right = insert( x, t.right );
         else
             ;  // Duplicate; do nothing
+            
         return balance( t );
     }
 
@@ -231,6 +235,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>>
 
         while( t.left != null )
             t = t.left;
+            
         return t;
     }
 
@@ -246,6 +251,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>>
 
         while( t.right != null )
             t = t.right;
+            
         return t;
     }
 
